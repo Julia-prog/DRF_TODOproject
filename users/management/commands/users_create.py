@@ -9,7 +9,7 @@ class Command(BaseCommand):
         User.objects.all().delete()
 
         for i in range(5):
-            user = User.objects.create(first_name=f'Иван{i + 1}',
+            user = User.objects.create_user(first_name=f'Иван{i + 1}',
                                        last_name=f'Петров{i + 1}',
                                        username=f'Ivan{i + 1}',
                                        email=f'{i + 1}@gmail.com')
