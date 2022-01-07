@@ -21,9 +21,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 
 try:
-    with open('BASE_DIR/venv/secret_key.json', 'r') as secret_key_text:
+    with open('venv/secret_key.json', 'r') as secret_key_text:
         secret_key = json.load(secret_key_text)
-        print(f'OPPS')
+
 except Exception as e:
     print(f'Secr_key_exeption: {e}')
 
