@@ -19,13 +19,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-
-try:
-    with open('venv/secret_key.json', 'r') as secret_key_text:
-        secret_key = json.load(secret_key_text)
-
-except Exception as e:
-    print(f'Secr_key_exeption: {e}')
+SECRET_KEY = "django-insecure-79ch1z%p(!an6f)dnzk@#p5ku4)t-k^e4%rd3l*jne7f=d7#l%"
+# try:
+#     with open('../venv/secret_key.json', 'r') as secret_key_text:
+#         SECRET_KEY = json.load(secret_key_text)
+#
+# except Exception as e:
+#     print(f'Secr_key_exeption: {e}')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -51,6 +51,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -129,3 +130,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'users.User'
+
+CORS_ALLOWED_ORIGINS = [
+   "http://localhost:3000",
+]
