@@ -1,8 +1,14 @@
 import React from 'react';
 import './App.css';
 import UserList from './components/user.js'
+import Footer from './components/footer.js'
 import axios from 'axios'
+import Header from "./components/header";
+import Button from 'react-bootstrap/Button';
 
+
+// const home = 'http://127.0.0.1:8000/api/';
+// const get_url = (url) => '${home}${url}';
 
 class App extends React.Component {
 
@@ -28,9 +34,13 @@ class App extends React.Component {
 
    render () {
        return (
-           <div>
+           <div style={{background: '#32CD32',
+                        textAlign: "center"}}>
+               <Header/>
                <UserList users={this.state.users} />
+               <Footer/>
            </div>
+
        )
    }
 }

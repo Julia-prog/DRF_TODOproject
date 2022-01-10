@@ -21,7 +21,7 @@ const UserList = ({users}) => {
    return (
        <table>
 
-           <th>
+           <th >
                First Name
            </th>
            <th>

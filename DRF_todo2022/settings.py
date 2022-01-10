@@ -19,14 +19,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = "django-insecure-79ch1z%p(!an6f)dnzk@#p5ku4)t-k^e4%rd3l*jne7f=d7#l%"
 
-try:
-    with open('venv/secret_key.json', 'r') as secret_key_text:
-        secret_key = json.load(secret_key_text)
-        SECRET_KEY = secret_key['SECRET_KEY']
-
-except Exception as e:
-    print(f'Secr_key_exeption: {e}')
+# try:
+#     with open('venv/secret_key.json', 'r') as secret_key_text:
+#         secret_key = json.load(secret_key_text)
+#         SECRET_KEY = secret_key['SECRET_KEY']
+#
+# except Exception as e:
+#     print(f'Secr_key_exeption: {e}')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
