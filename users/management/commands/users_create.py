@@ -15,6 +15,7 @@ class Command(BaseCommand):
                                        email=f'{i + 1}@gmail.com')
             print(f'user {user} created')
 
-        User.objects.create_superuser(username='admin', password='Aa12345@', email='email@yandex.ru')
+        User.objects.create_superuser(first_name='Админ', last_name='Петров', username='admin',
+                                      password='Aa12345@', email='email@yandex.ru')
 
         print('done')
